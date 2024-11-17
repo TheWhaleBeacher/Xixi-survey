@@ -1,106 +1,107 @@
 <!DOCTYPE html>
-<html lan="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=divice-width, initial-scale=1.0">
-<title>Xi Xi Survey Form></title>
-<link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xi Xi Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1 id="title">Xi Xi Survey Form</h1>
   <p id="description">Thank you for taking the time to help us get to know you.</p>
-</html>
-<form id="survey-form" action="https://formspree.io/f/mvgoqonj" method="POST">
-  <div>
-  <label id="name-label">What is your name?
-  </div>
-    <input placeholder="Enter Xi Xi" id="name" type="text" required>
-  </label>
-  <div>
-  <label id="email-label">Put your email?
-  </div>
-    <input placeholder="Put your mom's email" id="email" type="email" required>
-  </label>
-  <div>
-  <label id="number-label">How old are you?
-  </div>
-    <input placeholder="Enter 7" id="number" type="number" min="1" max="120">
-  <div>
-  <label> Which option best describes your current mood?</label>
-  </div>
-  <select id="dropdown">
-    <option value="" selected disabled>Select an option</option>
-    <option>Silly</option>
-    <option>Goofy</option>
-    <option>Bonkers</option>
-    <option>Wacky</option>
-    <option>Crazy</option>
-    <option>Farting</option>
-  </select>
-  <div>
-  <fieldset>
-  <label>Would you say that you are enjoying this survey?
-  <div>
-    <input value="Definitely" name="Enjoyment" type="radio">Definitely
-  </div>
-  <div>
-    <input value="Maybe" name="Enjoyment" type="radio">Maybe
-  </div>
-  <div>
-    <input value="Not sure" name="Enjoyment" type="radio">Not sure
-  </div>
-  </label>
-  </fieldset>
-  <fieldset>If you were going to be stranded on a desert island, what would you bring? (Choose up to 4)
-  <div>
-  <label>
-    <input type="checkbox" value="Jesse"> Jesse
-  </label>
-  <label>
-    <input type="checkbox" value="Parents"> Parents
-  </label>
-    <input type="checkbox" value="Homework"> Homework
-  <label>
-    <input type="checkbox" value="Chicken"> Chicken Nuggets
-  </label>
-  <label>
-    <input type="checkbox" value="Gaga Ashton" checked required> Gaga Ashton
-  </label>
-  <label>
-    <input type="checkbox" value="Stufties"> Stufties
-  </label>
-  <label>
-    <input type="checkbox" value="Violin"> Violin
-  </label>
-  <label>
-    <input type="checkbox" value="Piano"> Piano
-  </label>
-  <label>
-    <input type="checkbox" value="Inga"> Inga
-  </label>
-  <label>
-    <input type="checkbox" value="Harlem"> Harlem
-  </label>
-  <label>
-    <input type="checkbox" value="Coloring"> Coloring supplies
-  </label>
-  <label>
-    <input type="checkbox" value="Old cheese"> Old cheese
-  </label>
-  <label>
-    <input type="checkbox" value="Link & Zelda"> Link & Zelda
-  </label>
-  <label>
-    <input type="checkbox" value="Movies"> Movies
-  </label>
-  </fieldset>
-  <div>
-<label> Please write me a very short and very scary story.
-<div>
-  <textarea placeholder="Type your story here..."></textarea>
-</div>
-</label>
-<button id="submit">Submit</button>
-</form>
-</body>
-</html>
+
+  <form id="survey-form" action="https://formspree.io/f/mvgoqonj" method="POST">
+    <!-- Name input -->
+    <div>
+      <label id="name-label">What is your name?
+        <input placeholder="Enter Xi Xi" id="name" type="text" name="name" required>
+      </label>
+    </div>
+
+    <!-- Email input -->
+    <div>
+      <label id="email-label">Put your email?
+        <input placeholder="Put your mom's email" id="email" type="email" name="email" required>
+      </label>
+    </div>
+
+    <!-- Age input -->
+    <div>
+      <label id="number-label">How old are you?
+        <input placeholder="Enter 7" id="number" type="number" name="age" min="1" max="120">
+      </label>
+    </div>
+
+    <!-- Mood dropdown -->
+    <div>
+      <label>Which option best describes your current mood?</label>
+      <select id="dropdown" name="mood">
+        <option value="" selected disabled>Select an option</option>
+        <option>Silly</option>
+        <option>Goofy</option>
+        <option>Bonkers</option>
+        <option>Wacky</option>
+        <option>Crazy</option>
+        <option>Farting</option>
+      </select>
+    </div>
+
+    <!-- Enjoyment radio buttons -->
+    <div>
+      <fieldset>
+        <legend>Would you say that you are enjoying this survey?</legend>
+        <label>
+          <input value="Definitely" name="enjoyment" type="radio">Definitely
+        </label>
+        <label>
+          <input value="Maybe" name="enjoyment" type="radio">Maybe
+        </label>
+        <label>
+          <input value="Not sure" name="enjoyment" type="radio">Not sure
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- Items to bring checkbox inputs -->
+    <div>
+      <fieldset>
+        <legend>If you were going to be stranded on a desert island, what would you bring? (Choose up to 4)</legend>
+        <label>
+          <input type="checkbox" name="items[]" value="Jesse"> Jesse
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Parents"> Parents
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Homework"> Homework
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Chicken Nuggets"> Chicken Nuggets
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Gaga Ashton" checked> Gaga Ashton
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Stufties"> Stufties
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Violin"> Violin
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Piano"> Piano
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Inga"> Inga
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Harlem"> Harlem
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Coloring"> Coloring supplies
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Old cheese"> Old cheese
+        </label>
+        <label>
+          <input type="checkbox" name="items[]" value="Link & Zel
+
